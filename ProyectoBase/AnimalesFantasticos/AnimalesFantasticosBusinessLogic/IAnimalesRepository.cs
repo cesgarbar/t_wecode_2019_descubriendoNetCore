@@ -7,9 +7,12 @@ namespace AnimalesFantasticosBusinessLogic
 {
     public interface IAnimalesRepository : IDisposable
     {
-        List<Animales> GetAnimales(); Animales GetAnimalById(int animalId);
-        void InsertAnimal(Animales animalToAdd); void DeleteAnimal(int animalId);
-        void UpdateAnimal(Animales animalToUpdate); void saveChanges();
+        List<Animales> GetAnimales();
+        Animales GetAnimalById(int animalId);
+        void InsertAnimal(Animales animalToAdd);
+        void DeleteAnimal(int animalId);
+        void UpdateAnimal(Animales animalToUpdate);
+        void saveChanges();
     }
 
 }

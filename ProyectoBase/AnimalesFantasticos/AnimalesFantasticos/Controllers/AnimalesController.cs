@@ -20,12 +20,13 @@ namespace AnimalesFantasticos.Controllers
         {
             List<AnimalesDTO> resultList = new List<AnimalesDTO>(); try
             {
-                resultList = animalesManager.GetAnimalesList(); return resultList;
+                resultList = animalesManager.GetAnimalesList();
+                return resultList;
 
             }
             catch (Exception ex)
             {
-                return BadRequest("Error del servidor");
+                return BadRequest("Error del servidor" + ex.Message);
             }
         }
 
